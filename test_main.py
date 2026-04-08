@@ -1,6 +1,11 @@
 import main
 import pytest
 
+
+def test_main():
+    assert main.sum(3,6) == 9, 'noooooo'
+
+
 @pytest.mark.parametrize(
         ('input_x', 'input_y', 'expected'),
         (0, 0, 1),
@@ -10,10 +15,6 @@ import pytest
         (1, 7, 8)
 
 )
-def test_main():
-    assert main.sum(3,6) == 9, 'noooooo'
-
 def test_main2(input_x, input_y, expected):
     assert main.sum(input_x, input_y) == expected
 
-test_main2()
